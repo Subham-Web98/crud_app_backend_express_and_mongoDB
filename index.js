@@ -6,7 +6,10 @@ import router from "./src/app/routes/user.routes.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin:["crud-application-using-mern-stack.vercel.app
+"],methods:["POST","GET","PUT","DELETE"],credentials:true
+}));
 app.use(express.json());
 dotenv.config();
 
