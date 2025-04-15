@@ -19,6 +19,10 @@ app.use(express.json());
 dotenv.config();
 
 //* Routes
+app.get("/", (req, res) => {
+  res.send("✅ Backend server is running successfully!");
+});
+
 app.use("/api/users",router)
 
 //* Database connection and server start done here
